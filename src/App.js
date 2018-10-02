@@ -67,7 +67,7 @@ class App extends Component {
 
   componentDidMount() {
     window.addEventListener('scroll', this.handleOnScroll.bind(this));
-    axios.get(`https://api.flickr.com/services/rest/?method=flickr.interestingness.getList&api_key=ca3783111609d69139840916b7a01ad2&format=json&nojsoncallback=1&per_page=20&page=${this.state.nextPage}&extras=media%2Curl_m%2Cowner_name`)
+    axios.get(`https://api.flickr.com/services/rest/?method=flickr.interestingness.getList&api_key=dddc7f158a499bb13fbc802f62c27dc0&format=json&nojsoncallback=1&per_page=20&page=${this.state.nextPage}&extras=media%2Curl_m%2Cowner_name`)
       .then(res => {
           this.setState({
             pictures: res.data.photos.photo,
