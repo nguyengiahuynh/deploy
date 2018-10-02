@@ -7,7 +7,7 @@ import './App.css';
 
 
 const config = {
-  containerWidth: 1087,
+  containerWidth: 1150,
   containerPadding: 0,
   boxSpacing: {
     horizontal: 5,
@@ -45,7 +45,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="container" style={{position: 'relative'}}>
       {!!this.state.pictures.length && this.state.pictures.map((item, key) => {
         return(
           <div className="photo-view" key={key} style={this.state.geometry.boxes[key]}>
