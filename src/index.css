@@ -3,3 +3,111 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.bg-dark{
+	background-color: #000000 !important;
+}
+
+.photo-list-view {
+  position: relative;
+}
+
+
+.photo-view{
+  position: absolute;
+}
+
+.photo-view img{
+    width: 100%;
+    height: 100%;
+}
+.photo-view .interaction-view {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   opacity: 0;
+   -webkit-transition: opacity .2s linear;
+   transition: opacity .2s linear;
+}
+
+  .photo-view .interaction-view:hover {
+    opacity: 1;
+    background-image: -webkit-linear-gradient(transparent 65%,rgba(0,0,0,.35));
+    background-image: linear-gradient(transparent 65%,rgba(0,0,0,.35));
+  }
+
+  .photo-list-photo-interaction {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+
+a.overlay {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   z-index: 1;
+}
+
+.photo-list-photo-interaction .interaction-bar {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 8px 8px;
+    z-index: 2;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+  }
+
+  .photo-list-photo-interaction .interaction-bar .text {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    min-width: 0;
+    min-height: 0;
+    margin-right: 12px;
+  }
+
+  .photo-list-photo-interaction .interaction-bar .text .attribution, .photo-list-photo-interaction .interaction-bar .text .title {
+    display: block;
+    margin: 2px 0 0;
+    text-shadow: 0 0 2px #000;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+    z-index: 2;
+  }
+
+  .photo-list-photo-interaction .interaction-bar a, .photo-list-photo-interaction .interaction-bar a:hover {
+    text-decoration: none;
+  }
+
+  .photo-list-photo-interaction .interaction-bar .text .title {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 600;
+    min-height: 17px;
+  }
+
+  .photo-list-photo-interaction .interaction-bar .text .attribution {
+    color: hsla(0,0%,100%,.7);
+    font-size: 11px;
+    -webkit-transition: color .15s linear;
+    transition: color .15s linear;
+  }
